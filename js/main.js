@@ -52,6 +52,42 @@ window.addEventListener('scroll', () => {
 });
 
 // ===================================
+// PROJECT FILTERING
+// ===================================
+
+const filterBtns = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.project-card');
+
+filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        // Update active button
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-filter');
+
+        // Filter projects
+        projectCards.forEach(card => {
+            const category = card.getAttribute('data-category');
+
+            if (filter === 'all' || category === filter) {
+                card.style.display = 'block';
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 10);
+            } else {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    card.style.display = 'none';
+                }, 300);
+            }
+        });
+    });
+});
+
+// ===================================
 // ANIMATIONS ON SCROLL
 // ===================================
 
@@ -70,8 +106,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe project cards
-const projectCards = document.querySelectorAll('.project-card');
+// Observe project cards (already declared above for filtering)
 projectCards.forEach((card, index) => {
     card.style.opacity = '0';
     card.style.transform = 'translateY(50px)';

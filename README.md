@@ -1,10 +1,10 @@
-# Portfolio Personal - Desarrollador Botpress
+# Portfolio Personal - Yazmín Löliger
 
-Portfolio web profesional showcasing chatbot development projects with Botpress.
+Portfolio web profesional de automatización e IA, mostrando proyectos de integración de sistemas y desarrollo de agentes conversacionales.
 
 ## 🌐 Live Demo
 
-[Ver Portfolio](https://tu-usuario.github.io/Portfolio-Web)
+[Ver Portfolio](https://yazminloliger.github.io)
 
 ## 🚀 Proyectos Destacados
 
@@ -112,9 +112,9 @@ El portfolio está optimizado para:
 
 ## 📧 Contacto
 
-- **Email:** tu@email.com
-- **GitHub:** [@tu-usuario](https://github.com/tu-usuario)
-- **LinkedIn:** [/in/tu-usuario](https://linkedin.com/in/tu-usuario)
+- **Email:** loliger.yazmin@gmail.com
+- **GitHub:** [@YazminLoliger](https://github.com/YazminLoliger)
+- **LinkedIn:** [/in/yazmin-loliger](https://linkedin.com/in/yazmin-loliger)
 
 ---
 

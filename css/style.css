@@ -462,6 +462,24 @@ section {
     border: 1px solid rgba(0, 255, 136, 0.3);
 }
 
+.tag-botpress {
+    background-color: #111;
+    color: #fff;
+    border-color: #333;
+}
+
+.tag-n8n {
+    background-color: #EA4B71;
+    color: #fff;
+    border-color: #EA4B71;
+}
+
+.tag-zapier {
+    background-color: #FF4F00;
+    color: #fff;
+    border-color: #FF4F00;
+}
+
 .project-title {
     font-family: var(--font-heading);
     font-size: 1.5rem;

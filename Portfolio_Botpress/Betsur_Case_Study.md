@@ -49,7 +49,7 @@ El bot cuenta con flujos bien estructurados:
 
 ### Herramientas Personalizadas (Tools)
 -   **Extract Content from Image**: Capacidad de extraer y procesar texto de imágenes enviadas por los usuarios (útil para validar DNI o documentos).
--   **Contacto**: Sistema de gestión de información de contacto del usuario.
+-   **Contacto**: Sistema de gestión de información de contacto del usuario, integrado con [Freshdesk](../Portfolio_Zapier/Freshdesk_Integration_Case_Study.md) para la creación automática de tickets.
 -   **Int_Improvement_Feedback_Table**: Integración para recolectar feedback y mejoras sugeridas, almacenándolo en una tabla/base de datos.
 
 ### Tecnología NLU

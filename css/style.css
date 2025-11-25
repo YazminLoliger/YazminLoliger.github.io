@@ -8,15 +8,15 @@
 }
 
 :root {
-    /* Colors */
-    --primary-color: #00ff88;
-    --secondary-color: #0088ff;
+    /* Colors - Purple/Magenta Palette */
+    --primary-color: #a855f7;
+    --secondary-color: #c026d3;
     --bg-dark: #0a0e27;
     --bg-darker: #050816;
     --bg-card: #1a1d35;
     --text-primary: #ffffff;
     --text-secondary: #a8b2d1;
-    --border-color: rgba(255, 255, 255, 0.1);
+    --border-color: rgba(168, 85, 247, 0.1);
 
     /* Typography */
     --font-primary: 'Inter', sans-serif;

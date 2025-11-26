@@ -102,6 +102,11 @@ const observer = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             entry.target.style.opacity = '1';
             entry.target.style.transform = 'translateY(0)';
+
+            // Trigger number animation if it's a metric
+            if (entry.target.classList.contains('metric-item')) {
+                animateNumber(entry.target);
+            }
         }
     });
 }, observerOptions);
@@ -123,8 +128,48 @@ skillItems.forEach((item, index) => {
     observer.observe(item);
 });
 
+// Observe metric items
+const metricItems = document.querySelectorAll('.metric-item');
+metricItems.forEach((item, index) => {
+    item.style.opacity = '0';
+    item.style.transform = 'translateY(30px)';
+    item.style.transition = `all 0.7s ease ${index * 0.1}s`;
+    observer.observe(item);
+});
+
 // ===================================
-// TYPING EFFECT (Optional Enhancement)
+// ANIMATED NUMBER COUNTER
+// ===================================
+
+function animateNumber(element) {
+    const numberElement = element.querySelector('.metric-number');
+    if (!numberElement || numberElement.dataset.animated === 'true') return;
+
+    const finalValue = numberElement.textContent;
+    const numericValue = parseInt(finalValue.replace(/\D/g, ''));
+    const suffix = finalValue.replace(/[0-9]/g, '');
+    const duration = 2000; // 2 seconds
+    const steps = 60;
+    const stepValue = numericValue / steps;
+    const stepDuration = duration / steps;
+
+    let currentValue = 0;
+    numberElement.textContent = '0' + suffix;
+
+    const counter = setInterval(() => {
+        currentValue += stepValue;
+        if (currentValue >= numericValue) {
+            numberElement.textContent = finalValue;
+            clearInterval(counter);
+            numberElement.dataset.animated = 'true';
+        } else {
+            numberElement.textContent = Math.floor(currentValue) + suffix;
+        }
+    }, stepDuration);
+}
+
+// ===================================
+// TYPING EFFECT
 // ===================================
 
 const heroRole = document.querySelector('.hero-role');
